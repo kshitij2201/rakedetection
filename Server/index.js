@@ -33,3 +33,6 @@ app.get("/", (req, res) => {
 
 
 // updated with the code
+
+
+export default app;
