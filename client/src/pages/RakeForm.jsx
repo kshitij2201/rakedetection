@@ -25,7 +25,7 @@ export default function RakeForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("https://rake-detection.onrender.com/api/v2/rake/addRake", formData);
+      const response = await axios.post("https://rakedetection.vercel.app//api/v2/rake/addRake", formData);
       console.log(response.data);
       alert("Success");
       setFormData(initialFormData); 
