@@ -120,7 +120,7 @@ export default function UpdateTable() {
   const fetchProgressData = async () => {
     try {
       const response = await fetch(
-        `https://rakedetection.vercel.app/api/v3/wagon/getProgress/${rakeNo}`
+        `https://rakedetection-bakckend.vercel.app/api/v3/wagon/getProgress/${rakeNo}`
       );
       const data = await response.json();
       if (data.success) {
@@ -191,7 +191,7 @@ export default function UpdateTable() {
       console.log("Payload:", payload);
 
       const response = await fetch(
-        "https://rakedetection.vercel.app/api/v3/wagon/updateHourlyProgress",
+        "https://rakedetection-bakckend.vercel.app/api/v3/wagon/updateHourlyProgress",
         {
           method: "PUT",
           headers: {

@@ -19,7 +19,7 @@ export const login = (email, password) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      `https://rakedetection.vercel.app/api/v1/user/login`,
+      `https://rakedetection-bakckend.vercel.app/api/v1/user/login`,
       { email, password },
       config
     );
@@ -67,7 +67,7 @@ export const isLogin = () => async (dispatch) => {
       },
     };
 
-    const response = await axios.get(`https://rakedetection.vercel.app/api/v1/user/isLogin`, config);
+    const response = await axios.get(`https://rakedetection-bakckend.vercel.app/api/v1/user/isLogin`, config);
 
     if (response.data.success && response.data.isLogin) {
       dispatch(setIsLoginTrue());

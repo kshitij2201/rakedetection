@@ -20,13 +20,14 @@ const Report = () => {
     }
 
     try {
-      const response = await axios.post('https://rakedetection.vercel.app/api/v3/wagon/report-1', {
+      const response = await axios.post('https://rakedetection-bakckend.vercel.app/api/v3/wagon/report-1', {
         rakeNo,
         releaseTime,
         railwayInputHours,
       });
 
       if (response.data.success) {
+        console.log(response.data)
         setReport(response.data.report);
         setError('');
         toast.success('Report generated successfully');

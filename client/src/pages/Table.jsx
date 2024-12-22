@@ -14,7 +14,7 @@ export default function Table() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://rakedetection.vercel.app/api/v2/rake/getAllRakes");
+        const response = await axios.get("https://rakedetection-bakckend.vercel.app/api/v2/rake/getAllRakes");
         if (response.data.success) {
           setRakes(response.data.rakes);
         }
@@ -56,7 +56,7 @@ export default function Table() {
     console.log("Payload:", payload);
   
     try {
-      const response = await axios.post("https://rakedetection.vercel.app/api/v3/wagon/assignWagons", payload);
+      const response = await axios.post("https://rakedetection-bakckend.vercel.app/api/v3/wagon/assignWagons", payload);
   
       if (response.data.success) {
         alert("Wagons assigned successfully!");
