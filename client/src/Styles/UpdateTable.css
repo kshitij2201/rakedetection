@@ -1,0 +1,55 @@
+.but {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.but input {
+  margin: 10px;
+  margin-left: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 20px;
+  background-color: #02b030;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.update-table {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0rem;
+  }
+  .update-table table {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  
+  .update-table table tr th {
+    border: solid 1px #03396c;
+    padding: 15px 25px;
+    text-align: center;
+    border-collapse: collapse;
+  }
+  .update-table table tr td {
+    border: solid 1px #044c8f;
+    text-align: center;
+    border-collapse: collapse;
+    padding: 25px ;
+  }
+  
+  .update-table table tr td button {
+    padding: 7px 15px;
+    border-radius: 2rem;
+    border: none;
+    background-color: rgb(68, 168, 68);
+  }
+  
+
+  .btn-excel{
+    border: 1px solid black;
+    padding: 2px 15px;
+    border-radius: 5px;
+    background-color: #02b030;
+    color: whitesmoke;
+    font-weight: 600;
+  }
