@@ -7,7 +7,7 @@ const Sorting = () => {
   const [minOccurrence, setMinOccurrence] = useState(null);
 
   useEffect(() => {
-    fetch("https://rakedetection.vercel.app//api/v3/wagon/reasons")
+    fetch("https://rakedetection.vercel.app/api/v3/wagon/reasons")
       .then((response) => response.json())
       .then((data) => {
         if (data.success) {

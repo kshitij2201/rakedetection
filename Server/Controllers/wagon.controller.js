@@ -210,7 +210,7 @@ export const generateReport = async (req, res) => {
     }
 
     // Fetch the progress details from the external API
-    const progressResponse = await axios.get(`https://rakedetection.vercel.app//api/v3/wagon/getProgress/${rakeNo}`);
+    const progressResponse = await axios.get(`https://rakedetection.vercel.app/api/v3/wagon/getProgress/${rakeNo}`);
 
     // Log the response to see its structure
     console.log("Progress Response:", progressResponse.data);
