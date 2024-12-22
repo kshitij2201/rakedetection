@@ -9,6 +9,14 @@ const app = express();
 const port = process.env.PORT;
 const mongoUrl = process.env.MONGO_URL;
 
+const corsOptions = {
+  origin:['https://rakedetection-frontend.vercel.app/'],
+   methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}
+
+
+
 app.use(express.json());
 app.use(cors(corsOptions));
 
@@ -20,13 +28,6 @@ app.use("/api/v1/user", userRouter);
 app.use("/api/v2/rake", rakeRouter);
 app.use("/api/v3/wagon", wagonRouter);
 
-
-
-const corsOptions = {
-  origin:['https://rakedetection-frontend.vercel.app/'],
-   methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization']
-}
 
 mongoose
   .connect(mongoUrl)
