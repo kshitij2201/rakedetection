@@ -10,7 +10,7 @@ const port = process.env.PORT;
 const mongoUrl = process.env.MONGO_URL;
 
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 
 import userRouter from "./Routes/auth.route.js";
 import rakeRouter from "./Routes/form.route.js";
@@ -19,6 +19,14 @@ import wagonRouter from "./Routes/wagon.route.js";
 app.use("/api/v1/user", userRouter);
 app.use("/api/v2/rake", rakeRouter);
 app.use("/api/v3/wagon", wagonRouter);
+
+
+
+const corsOptions = {
+  origin:['https://rakedetection-frontend.vercel.app/'],
+   methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}
 
 mongoose
   .connect(mongoUrl)
